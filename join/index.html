@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Sharp Sharp! duel invite</title>
+<title>Sharp Sharp! invite</title>
 <meta name="robots" content="noindex">
 <meta property="og:title" content="You have been challenged to a Sharp Sharp! duel">
 <meta property="og:description" content="Same 7 South African trivia questions, 15 seconds each. Tap to play.">
@@ -29,15 +29,15 @@
 </head>
 <body>
 <main>
-  <h1>Sharp Sharp!<br>duel invite</h1>
+  <h1>Sharp Sharp!<br>invite</h1>
 
   <div id="ok" class="stack hidden">
-    <p class="muted">A friend challenged you to a South African trivia duel: the same 7 questions, 15 seconds each.</p>
+    <p class="muted">A friend invited you to play Sharp Sharp!, the South African trivia game. Tap the button, or enter the code in the app.</p>
 
     <a id="open" class="btn" href="#">Open in Sharp Sharp!</a>
 
     <div class="card">
-      <div class="label">DUEL CODE</div>
+      <div class="label">CODE</div>
       <div id="code" class="code"></div>
       <button id="copy" class="btn alt" type="button">Copy the code</button>
     </div>
@@ -65,7 +65,7 @@
   var params = new URLSearchParams(location.search);
   var code = (params.get('code') || '').replace(/[^A-Za-z0-9]/g, '').toUpperCase();
   var ok = document.getElementById('ok');
-  if (code.length < 6 || code.length > 12) { document.getElementById('bad').classList.remove('hidden'); return; }
+  if (code.length < 4 || code.length > 12) { document.getElementById('bad').classList.remove('hidden'); return; }
   ok.classList.remove('hidden');
   document.getElementById('code').textContent = code;
 
